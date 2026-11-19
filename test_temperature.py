@@ -33,7 +33,7 @@ def test_read_only_attributes() -> None:
 
 # 2. Validation.
 
-@pytest.mark.parameterize("invalid_unit", ["X", "", "Celsius"])
+@pytest.mark.parametrize("invalid_unit", ["X", "", "Celsius"])
 def test_invalid_units(invalid_unit: str) -> None:
     """Reject invalid unit strings during creation and conversion."""
     with pytest.raises(ValueError):
@@ -43,7 +43,7 @@ def test_invalid_units(invalid_unit: str) -> None:
     with pytest.raises(ValueError):
         temperature.convert_to(invalid_unit)
 
-@pytest.mark.parameterize(
+@pytest.mark.parametrize(
     "value, unit",
     [(-273.16, "C"), (-459.68, "F"), (-0.01, "K")],
 )
@@ -55,9 +55,9 @@ def test_below_absolute_zero(value: float, unit: str) -> None:
 
 # 3. Conversions at the five reference points.
 
-@pytest.mark.parameterize("startin_unit", ["C", "F", "K"])
-@pytest.mark.parameterize(
-    "celsius", "fahrenheit", "kelvin",
+@pytest.mark.parametrize("starting_unit", ["C", "F", "K"])
+@pytest.mark.parametrize(
+    "celsius, fahrenheit, kelvin",
     [
         (-273.15, -459.67, 0.0),
         (-40.0, -40.0, 233.15),
@@ -77,3 +77,49 @@ def test_reference_conversions(
     assert temperature.to_celsius() == pytest.approx(celsius, abs=1e-9)
     assert temperature.to_fahrenheit() == pytest.approx(fahrenheit, abs=1e-9)
     assert temperature.to_kelvin() == pytest.approx(kelvin, abs=1e-9)
+
+# 4. Round-trip conversion.
+
+def test_round_trip() -> None:
+    """Convert C to F to K to C and recover original temperature."""
+    original = Temperature(21.5, "C")
+    fahrenheit = original.convert_to("f")
+    kelvin = fahrenheit.convert_to("k")
+    result = kelvin.convert_to("c")
+
+    assert (fahrenheit.unit, kelvin.unit, result.unit) == ("F", "K", "C")
+    assert result.value == pytest.approx(21.5, abs=1e-9)
+    assert result == original
+    assert result is not original
+    assert original.unit == "C"
+
+def test_cross_unit_comparisons() -> None:
+    """Check equality and ordering for equal/unequal temperatures."""
+    freezing = Temperature(0, "C")
+    equivalent = Temperature(32, "F")
+    warmer = Temperature(300, "K")
+
+    assert freezing == equivalent
+    assert freezing <= equivalent
+    assert freezing >= equivalent
+    assert not (freezing < equivalent)
+    assert not (freezing > equivalent)
+
+    assert freezing != warmer
+    assert freezing < warmer
+    assert freezing <= warmer
+    assert warmer > equivalent
+    assert warmer >= equivalent
+
+def test_comparison_tolerance() -> None:
+    """Treat differences within 1e-9K as equal."""
+    baseline = Temperature(10, "K")
+    assert baseline == Temperature(10 + 0.5e-9, "K")
+    assert baseline < Temperature(10 + 2e-9, "K")
+
+def test_string_formatting() -> None:
+    """Check exact human-readable and developer representations."""
+    temperature = Temperature(25, "C")
+
+    assert str(temperature) == "25.00 °C"
+    assert repr(temperature) == "Temperature(25.0, 'C')"
