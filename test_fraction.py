@@ -82,4 +82,4 @@ def test_string_formatting() -> None:
     fraction = Fraction(6, 8)
 
     assert str(fraction) == "3/4"
-    assert repr(fraction) == "Fraction(3, 4"
+    assert repr(fraction) == "Fraction(3, 4)"
