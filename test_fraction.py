@@ -22,7 +22,7 @@ def test_initialization(
     fraction = Fraction(numerator, denominator)
 
     assert fraction.numerator == expected_numerator
-    assert fraction._denominator == expected_denominator
+    assert fraction.denominator == expected_denominator
 
 
 @pytest.mark.parametrize("invalid_value", [1.5, "2", True])

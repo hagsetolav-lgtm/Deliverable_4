@@ -47,7 +47,7 @@ class Fraction:
         return self.numerator * other.denominator < other.numerator * self.denominator
 
 
-    def __add__(self, other: "Fraction") -> "Franction":
+    def __add__(self, other: "Fraction") -> "Fraction":
         """Return the sum of two fractions."""
         if not isinstance(other, Fraction):
             return NotImplemented
