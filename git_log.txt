@@ -1,12 +1,83 @@
-* ad3de7e - Olav Hagset, 2 minutes ago : requirements.txt
-* f90e215 - Olav Hagset, 13 hours ago : url link
-* 6dcacaf - Olav Hagset, 13 hours ago : Small fixes notebook
-* fc0832d - Olav Hagset, 6 days ago : Task 2 + 1, small changes, fin
-* b12f4a3 - Olav Hagset, 7 days ago : Task 2 made class + pytest, not fin
-* 40b6540 - Olav Hagset, 7 days ago : Task 2 eq and numerator
-* 353c316 - Olav Hagset, 7 days ago : Task 1: temp tests fin + passing results
-* 95a0477 - Olav Hagset, 7 days ago : Task 1: init, valdi and conv
-* 8564eef - Olav Hagset, 7 days ago : part 1 task 1 fin
-* f5e32ce - Olav Hagset, 7 days ago : def conversions
-* ad51ad9 - Olav Hagset, 7 days ago : Task 1 - validate_unit
-* 5ec43a2 - Olav Hagset, 8 days ago : Initial commit
+commit 6b35c614bcdc0d19642cfac41bbc5426bb9a19b5
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Fri Nov 27 12:04:43 2026 +0100
+
+    readme
+
+commit 9b02f9235610da090ab4b07f81978e5ff8dcd69b
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Thu Nov 26 09:09:28 2026 +0100
+
+    git log
+
+commit ad3de7e5d767c5c4faa719671c7304c7d405918d
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Thu Nov 26 09:06:45 2026 +0100
+
+    requirements.txt
+
+commit f90e215961acd510d8e66228813a1ff2bdecf136
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Wed Nov 25 20:30:41 2026 +0100
+
+    url link
+
+commit 6dcacafe8da6091712a7641da52a2d1c49bc83a5
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Wed Nov 25 20:27:07 2026 +0100
+
+    Small fixes notebook
+
+commit fc0832d523a980c2f717e4027b8987ef306ae632
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Fri Nov 20 10:46:50 2026 +0100
+
+    Task 2 + 1, small changes, fin
+
+commit b12f4a3acc5bed0c05c0440f2bd9113908f1b346
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Thu Nov 19 18:13:59 2026 +0100
+
+    Task 2 made class + pytest, not fin
+
+commit 40b6540de1725803a7f5a61feba04d54ff7036a1
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Thu Nov 19 17:12:33 2026 +0100
+
+    Task 2 eq and numerator
+
+commit 353c3167a87127b2900330688442038b76a38683
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Thu Nov 19 16:57:11 2026 +0100
+
+    Task 1: temp tests fin + passing results
+
+commit 95a04778cbb81f76415fadd70cca4effdc7bf88f
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Thu Nov 19 11:10:55 2026 +0100
+
+    Task 1: init, valdi and conv
+
+commit 8564eefcb4bfc51d7324c0b6e1e21df2d5020e17
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Wed Nov 18 23:01:33 2026 +0100
+
+    part 1 task 1 fin
+
+commit f5e32ce410fd66d43c9bcc913c01c7b1388c5f6a
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Wed Nov 18 22:42:02 2026 +0100
+
+    def conversions
+
+commit ad51ad9c7150c07c7d6047b72d94c3bbc69f4471
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Wed Nov 18 22:30:47 2026 +0100
+
+    Task 1 - validate_unit
+
+commit 5ec43a2a8cfcbe3dd63cb9ef357723bcbc355233
+Author: Olav Hagset <hagsetolav@gmail.com>
+Date:   Wed Nov 18 15:38:13 2026 +0100
+
+    Initial commit
