@@ -1,0 +1,12 @@
+* ad3de7e - Olav Hagset, 2 minutes ago : requirements.txt
+* f90e215 - Olav Hagset, 13 hours ago : url link
+* 6dcacaf - Olav Hagset, 13 hours ago : Small fixes notebook
+* fc0832d - Olav Hagset, 6 days ago : Task 2 + 1, small changes, fin
+* b12f4a3 - Olav Hagset, 7 days ago : Task 2 made class + pytest, not fin
+* 40b6540 - Olav Hagset, 7 days ago : Task 2 eq and numerator
+* 353c316 - Olav Hagset, 7 days ago : Task 1: temp tests fin + passing results
+* 95a0477 - Olav Hagset, 7 days ago : Task 1: init, valdi and conv
+* 8564eef - Olav Hagset, 7 days ago : part 1 task 1 fin
+* f5e32ce - Olav Hagset, 7 days ago : def conversions
+* ad51ad9 - Olav Hagset, 7 days ago : Task 1 - validate_unit
+* 5ec43a2 - Olav Hagset, 8 days ago : Initial commit
